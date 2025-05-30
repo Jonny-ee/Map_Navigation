@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Navigation</title>
+    <link rel="stylesheet" href="./css/basic.css">
+  
+</head>
+
+<body>
+    
+    <header>
+       <a href="https://www.tongji.edu.cn/" class="logo-link" target="_blank">
+        <img src="./images/tongji.svg" alt="web logo" class="logo-img">
+       </a>
+       <button class="help-btm">
+        <img src="./images/help.svg" alt="help" class ="help-img">
+        <span>help</span>
+       </button>
+    </header>
+
+    
+    <div class="layout">
+        <!-- 左侧导航栏 -->
+        <div class="sidebar" id="sidebar">
+          <button class="sidebar-toggle" id="sidebarToggle">×</button>
+          <ul class="floor">
+            <h2> 导览</h2>
+            <li class="guide"><a href="#">1F</a></li>
+            <li class="guide"><a href="#">2F</a></li>
+            <li class="guide"><a href="#">3F</a></li>
+            <li class="guide"><a href="#">4F</a></li>
+            <li class="guide"><a href="#">5F</a></li>
+          </ul>
+        </div>
+        <!-- 右侧布局 --> 
+        <div class="main-area">
+            <!-- 右侧上部搜索栏 -->
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="输入人名，房间号搜索" />
+            </div>
+             <!-- 右侧下部 -->
+            <div class="container">
+                 <!-- 右侧下部的左部 -->
+                <div class="left-panel" id="infoPanel"></div>
+                <!-- 右侧下部的右部 -->
+                <div class="right-panel">
+                    <div class="map-wrapper">
+                        <div class="map-zoom-layer" id="zoomLayer">
+                            <img src="./images/map.jpg" alt="地图" class="map-image"draggable="false">
+                            <svg class="pin-layer" id="pinLayer"></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 弹窗容器 -->
+    <div id="popup" class="popup" style="display: none;">
+    <div class="popup-content">
+      <span class="popup-close">&times;</span>
+      <span class="popup-body"></span>
+    </div>
+  </div>
+
+  
+    <footer>
+
+    </footer>
+   <script type="module" src="./js/basic.js"></script>
+</body>
+</html>
